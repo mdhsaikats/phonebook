@@ -3,32 +3,27 @@
 int main() {
     int n;
     char number[11][100];
-    char array[50][100];
+    char name[50][100];
 
     printf("How many entries do you want: ");
     scanf("%d", &n);
 
     while (n > 0) {
         printf("Enter your number: ");
-        scanf("%s", number[n]);
+        scanf("%s", number[n - 1]);
 
         printf("Enter your name: ");
-        scanf("%s", array[n]);
+        scanf("%s", name[n - 1]);
         --n;
     }
 
     int i;
 
     printf("Which number do you want:\n");
-    scanf("%d",i);
-    if(i = 0){
-            i == n;
-     printf("Number: %s\n", number[n]);
-     printf("Name: %s\n", array[n]);
-    }else
-    {
-        printf("Error!");
+    scanf("%d", &i);
 
-    }
+    printf("Number: %s\n", number[i - 1]);
+    printf("Name: %s\n", name[i - 1]);
+
     return 0;
 }
