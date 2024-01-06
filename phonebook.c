@@ -1,9 +1,11 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
     int n;
     char number[11][100];
     char name[50][100];
+    char check[100];
 
     printf("How many entries do you want: ");
     scanf("%d", &n);
@@ -16,15 +18,23 @@ int main() {
         scanf("%s", name[n - 1]);
         --n;
     }
-    int i;
-    while(i >= 0)
-    {
-        printf("Which number do you want:\n");
-        scanf("%d", &i);
+    printf("Enter contract name to search: ");
+    scanf("%s", check);
 
-        printf("Number: %s\n", number[i - 1 ]);
-        printf("Name: %s\n", name[i - 1]);
+    int found = 0;
+    for (int i = 0; i < n; ++i) {
+        if (strcmp(check, name[i]) == 0) {
+            printf("Number: %s\n", number[i]);
+            printf("Name: %s\n", name[i]);
+            found = 1;
+            break; 
+        }
     }
+
+    if (!found) {
+        printf("Entry not found for the given name.\n");
+    }
+
 
     return 0;
 }
