@@ -4,23 +4,27 @@
 int main() {
     int n;
     char number[11][100];
-    char name[50][100];
-    
+    char name[11][100];
 
     printf("How many entries do you want: ");
     scanf("%d", &n);
 
-    while (n > 0) {
-        printf("Enter your number: ");
-        scanf("%s", number[n - 1]);
-
-        printf("Enter your name: ");
-        scanf("%s", name[n - 1]);
-        --n;
+    if (n > 11 || n <= 0) {
+        printf("Invalid number of entries. Please enter a number between 1 and 11.\n");
+        return 1;
     }
-    printf("Enter contract name to search: ");
-    scanf("%s", check);
+
+    for (int i = 0; i < n; ++i) {
+        printf("Enter your number for entry %d: ", i + 1);
+        scanf("%s", number[i]);
+
+        printf("Enter your name for entry %d: ", i + 1);
+        scanf("%s", name[i]);
+    }
+
     char check[100];
+    printf("Enter contact name to search: ");
+    scanf("%s", check);
 
     int found = 0;
     for (int i = 0; i < n; ++i) {
@@ -28,7 +32,7 @@ int main() {
             printf("Number: %s\n", number[i]);
             printf("Name: %s\n", name[i]);
             found = 1;
-            break; 
+            break;
         }
     }
 
@@ -36,8 +40,8 @@ int main() {
         printf("Entry not found for the given name.\n");
     }
 
-
     return 0;
 }
+
 
 //saikat
