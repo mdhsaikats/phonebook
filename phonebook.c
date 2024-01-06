@@ -16,14 +16,15 @@ int main() {
         scanf("%s", name[n - 1]);
         --n;
     }
-
     int i;
+    while(i >= 0)
+    {
+        printf("Which number do you want:\n");
+        scanf("%d", &i);
 
-    printf("Which number do you want:\n");
-    scanf("%d", &i);
-
-    printf("Number: %s\n", number[i - 1]);
-    printf("Name: %s\n", name[i - 1]);
+        printf("Number: %s\n", number[i - 1 ]);
+        printf("Name: %s\n", name[i - 1]);
+    }
 
     return 0;
 }
