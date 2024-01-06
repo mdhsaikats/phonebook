@@ -5,7 +5,7 @@ int main() {
     int n;
     char number[11][100];
     char name[50][100];
-    char check[100];
+    
 
     printf("How many entries do you want: ");
     scanf("%d", &n);
@@ -20,6 +20,7 @@ int main() {
     }
     printf("Enter contract name to search: ");
     scanf("%s", check);
+    char check[100];
 
     int found = 0;
     for (int i = 0; i < n; ++i) {
@@ -38,4 +39,5 @@ int main() {
 
     return 0;
 }
-// Something else
+
+//saikat
