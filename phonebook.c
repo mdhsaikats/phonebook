@@ -5,13 +5,9 @@ int main() {
     int n;
     char number[11][100];
     char name[11][100];
-
-
-
-    while (1)
-    {
-        
     
+    while (1)
+    { 
 
     char option[50];
     printf("1.Add 2.Search 3.Delete -  ");
@@ -53,11 +49,11 @@ int main() {
             break;
 
         case '3': 
-            // Add code for deleting entries
+             
             break;
 
         default:
-            printf("Invalid option.\n");
+            printf("**Invalid option**\n");
             break;
     }
 
