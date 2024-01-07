@@ -6,10 +6,17 @@ int main() {
     char number[11][100];
     char name[11][100];
 
+
+
+    while (1)
+    {
+        
+    
+
     char option[50];
     printf("1.Add 2.Search 3.Delete -  ");
     scanf("%s", option);
-    
+
 
     switch (option[0]) {
         case '1':
@@ -52,6 +59,8 @@ int main() {
         default:
             printf("Invalid option.\n");
             break;
+    }
+
     }
 
     return 0;
